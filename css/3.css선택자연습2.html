@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자연습</title>
+  <style>
+    body{
+      font-size: 14px; /* 0.875em 87.5% 11pt */
+      color: #f00;
+      /* font-family: "나눔", "궁서체"; */
+    }
+    /* .title 영역의 제목을 진하고 크게 24px 보라색 
+       섹션의 제목 요소 선택자 -> .title
+       진하게 속성  font-weight
+       24px 속성   font-size
+       보라색 속성  color
+    */
+    .title{
+      font-weight: bold;
+      font-size: 24px;
+      color: purple;
+    }
+    .title a{
+      color: #000;
+      text-decoration: none; /*밑줄문자안씀*/
+    }
+    .title a:hover{
+      color: purple;
+      text-decoration: underline;
+      background-color: rgba(0,0,255,0.5);
+      padding: 0.5rem 1rem;
+    }
+    /* 
+    모든 클래스box의 글자색을 검정 글자크기 10pt -> 10px
+    선택자 모든 클래스box -> .box
+    속성
+    글자색을 검정 color:#000
+    글자크기 10pt ->px font-size:13px; 0.929em
+    */
+    .box{
+      color: #000;
+      font-size: 0.929em;  /* 13px */
+      margin: 1rem; /* body의 글자크기 */
+      line-height: 1.4;
+      background-color: #ccc;
+    }
+    #section2 .box:nth-child(2){
+      color: #00f;
+      font-family: "궁서체";
+    }
+    /* 정소라 추가 */
+ /* #category .position .xans-record-:first-child a{color:#f00; font-weight:bold;}
+ #category .position .xans-record-:nth-child(3) a{background-color: rgba(255,0,0,0.5);} */
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+
+    </header>
+    <div class="main">
+      <!-- #section$.container*2>.inner>(.title>{제목})+.desc>.box*2>lorem6  -->
+      <div id="section1" class="container">
+        <div class="inner">
+          <div class="title">제목</div>
+          <div class="desc">
+            <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique doloremque architecto sed ratione magnam nobis dolorum laborum iste odit dolorem optio omnis sapiente, labore fuga! Explicabo quas delectus aut quidem?
+            Exercitationem minima reprehenderit dolor tempora magni enim corrupti. Quia adipisci in iste! Fugiat, earum commodi! Inventore eaque rem debitis labore ut quasi ullam vitae dolores saepe. Harum, mollitia. Inventore, nisi. Lorem ipsum dolor sit amet consectetur.</div>
+            <div class="box">Exercitationem eaque similique quasi laborum quibusdam!</div>
+          </div>
+        </div>
+      </div>
+      <div id="section2" class="container">
+        <div class="inner">
+          <div class="title"><a href="">제목</a></div>
+          <div class="desc">
+            <div class="box">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+            <div class="box">Lorem ipsum dolor sit amet consectetur.</div>
+            <div class="box">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint culpa veritatis nemo maiores dignissimos velit odit. Consequatur veritatis accusamus exercitationem veniam maxime sed porro harum ipsum magni, cupiditate possimus reprehenderit!
+            Veniam officiis architecto odit excepturi harum ipsam quaerat qui provident, porro assumenda corporis deleniti quia. Quos distinctio cum, debitis, eum delectus tempore deleniti autem doloribus architecto odit numquam aut adipisci! Iste sint inventore nisi obcaecati corrupti!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- div>{text} -->
+      <!-- <div>text</div> -->
+      <!-- div>lorem div>lorem*2 div>lorem2   -->
+      
+      <!-- emmet () 설명 -->
+        <!-- .box>p+div>p*2+div 마지막div 중간div 관계 -->
+        <!-- .box>p+(div>p*2)+div 마지막div 중간div 관계 -->
+      
+    </div>
+    <footer>
+
+    </footer>
+  </div>
+</body>
+</html>

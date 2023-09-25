@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- font-family: 'Raleway', sans-serif; -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- font-family: 'Noto Sans KR', sans-serif; -->
+  <title>float3-2단레이아웃</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    body,
+    div,
+    span,
+    h1{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      /* font-family: 'Raleway','Noto Sans KR', sans-serif;
+      font-size: 14px;
+      line-height: 1.4; */
+      font: 14px/1.4 'Raleway','Noto Sans KR', sans-serif ;
+      color: #000;
+    }
+    .banner-wrap{
+      width: 100%;
+      /* background-color: #ccc; 테스트용 */
+      /* border: 1px solid #000; 테스트용 */
+      overflow: hidden;
+    }
+    .banner-wrap .left{
+      width: 60%;
+      /* background-color: #f68; */
+      height: 500px; 
+      background-image: url(asset/img/main-banner01.jpg);
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: cover;
+      border-radius: 0 250px 250px 0;
+    }
+    .banner-wrap .right{
+      width: 40%;
+      /* background-color: #86f; 테스트용 */
+      padding-left: 100px;
+    }
+    .banner-wrap .right .text{
+      display: block;
+    }
+    .banner-wrap .right .text1{
+      margin-top: 110px;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+    .banner-wrap .right .text2{
+      font-size: 100px;
+      font-weight: 700;
+    }
+    .banner-wrap .right .text2 span{
+      letter-spacing: -6px;
+      padding-right: 20px;
+      /* display: inline; */
+    }
+    .banner-wrap .right .text3{
+      display: inline-block;
+      font-size: 20px;
+      margin-top: 40px;
+      border: 1px solid #000; /*테스트용*/
+    }
+    .banner-wrap .right .text3 a{
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #000;
+      background-color: #fff;
+    }
+    .banner-wrap .right .text3 a:hover{
+      background-color: #000;
+      color: #fff;
+    }
+    .banner-wrap .left{
+      float: left;
+    }
+    .banner-wrap .right{
+      float: left;
+    }
+    .banner-wrap{
+      overflow: hidden;
+    }
+    .banner-wrap::after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <h1>float 연습</h1>
+  <div class="sample">
+    가나다라 마바사아 자차카타 파하 가나다라 마바사아 자차카타 파하 가나다라 마바사아 자차카타 파하 가나다라 마바사아 자차카타 파하 가나다라 마바사아 자차카타 파하 가나다라 마바사아 자차카타 파하 가나다라 마바사아 자차카타 파하 가나다라 마바사아 자차카타 파하
+  </div>
+  <div class="banner-wrap">
+    <div class="left">
+
+    </div>
+    <div class="right">
+      <span class="text text1">
+        Runway items season off
+      </span>
+      <span class="text text2">
+        <span>30</span><span>%</span>
+      </span>
+      <span class="text text3">
+        <a href="">
+          Shop now
+        </a>
+      </span>
+    </div>
+  </div>
+</body>
+</html>

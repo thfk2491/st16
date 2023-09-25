@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float2-float로 layout잡기</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    body{
+      font-size: 14px;
+    }
+    /* 레이아웃 */
+    /* header 레이아웃 */
+    header{
+      padding: 1rem;
+      background-color: #ccc;
+    }
+    /* main 레이아웃 */
+    .container{
+      width: 90%;
+      max-width: 1400px;
+      background-color: #eee;
+      margin: 0 auto;
+      overflow: hidden;
+      display: block;
+    }
+    .container::after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .container .col{
+      border: 1px solid #000;
+      box-sizing: border-box;
+      background-color: #f68;
+      min-height: 300px;
+      /* float: left; */
+    }
+    .side-menu{
+      /* width: 20%; */
+      width: 15%;
+      max-width: 250px;
+      float: left;
+    }
+    .content{
+      width: 70%;
+      max-width: 980px;
+      float: left;
+    }
+    .right-aside{
+      width: 15%;
+      max-width: 250px;
+      float: left;
+    }
+
+    /* footer 레이아웃 */
+    footer{
+      /* clear: both; */
+      padding: 1rem;
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>header</header>
+  <div class="container">
+    <div class="side-menu col">side-menu</div>
+    <div class="content col">content</div>
+    <aside class="right-aside col">aside</aside>
+  </div>
+  <footer>footer</footer>
+</body>
+</html>

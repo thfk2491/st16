@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;400;500;600;700&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+/* font-family: 'IBM Plex Sans KR', sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Noto Sans KR', sans-serif; */
+/* reset */
+*{margin: 0; padding: 0;}
+/* 공통 */
+/* body에 서체 나눔고딕지정 글자크기 11pt -> em으로 지정 줄간격 1.2 글자색#333 그리고 ios에서 핸드폰 방향 전환했을때 글자 진하게 되지말게 설정 */
+body{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 0.938em; /*11px*/
+  line-height: 1.2;
+  color: #333;
+  -webkit-text-size-adjust: none;
+}
+/* 레이아웃 */
+/* 
+header를 부모의 너비를 다쓰고
+최소높이가 50px 되고 아니면 자식의 높이를 따른다.
+안쪽여백 2글자 들어가게
+배경색은 회색
+*/
+header{
+  width: 100%;
+  min-height: 50px;
+  padding: 2rem;
+  background-color: #ccc;
+}
+.page-title{
+  /* height: 130px; */
+  max-width: 1400px;
+  width: 90%;
+  /* margin: 0 auto; */
+  /* margin: 50px auto; 부모가 border padding text가 없는 경우는 margin x*/
+  background-color: #f00;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  color: #fff;
+}
+.container{}
+
+section{
+  background-color: #efefef;
+  margin-top: 50px;
+  /* min-height: 100px;  */
+  height: 100px;
+  /* width: 50vw; */
+  width: 300px;
+  margin:50px auto;  
+}
+#section1{
+  overflow: visible;
+}
+#section2{
+  overflow: hidden;
+}
+#section3{
+  /* overflow: scroll; */
+  overflow: auto;
+}

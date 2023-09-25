@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>boxmodel</title>
+  <!-- 외부의 css를 불러올때 -->
+  <link rel="stylesheet" href="asset/css/style1.css">
+  <style>
+    *{padding: 0; margin: 0;}
+    h1{background-color: #f68;}
+    .box:nth-of-type(1){
+      margin: 50px;
+    }
+    .box:nth-of-type(2){
+      background-color: #ccc;
+      width: 300px;
+      padding: 30px 50px;
+      border: 1px solid #000;
+      /* margin: 100px auto; */
+      text-align: right;
+    }
+    ul{
+      width: 80%;
+      background-color: #ccc;
+      margin: 50px auto;
+      text-align: center;
+      
+    }
+    ul li{
+      background-color: #f68;
+      /* width: 100px; */
+      /* width: 25%; */
+      width: calc(25% - 4px);
+      /* padding: 2rem; */
+      display: inline-block;
+    }
+    .test{
+
+      background-color: #6f8;
+      border: 1px solid #000;
+      /* padding: 50px;
+      margin: 50px; */
+      /* inline레벨은 수직여백은 정상적으로 적용x */
+      /*  */
+      padding: 0 1rem;
+      margin: 0 2rem;
+      width: 300px;
+    }
+  </style>
+</head>
+<!-- 태그에 인라인으로 css 적용 -->
+<body>
+  <h1 class="page-title">웹폰트 사용</h1>
+  <div class="box">Lorem <span class="test">ipsum dolor</span> sit <span class="test">amet consectetur</span> adipisicing elit. Molestias, dignissimos. Sunt officiis cupiditate dicta voluptatem obcaecati impedit, error nisi quam fugiat perferendis tempora iusto corporis ab assumenda optio ullam nesciunt.</div>
+  <!-- .box>lorem  -->
+  <div class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae ipsum, dolor placeat nesciunt temporibus modi sed eos ad iusto provident tempora, culpa distinctio quidem ratione, velit dolores. Vitae, ut a!</div>
+  <!-- ul>li*4>a>{text$}  -->
+  <ul>
+    <li><a href="">text1</a></li>
+    <li><a href="">text2</a></li>
+    <li><a href="">text3</a></li>
+    <li><a href="">text4</a></li>
+  </ul>
+  <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, aliquid. Sapiente provident quia perferendis eum! Ut incidunt, doloremque consequatur, nemo, magni debitis autem perferendis odit doloribus ducimus quibusdam sed corporis!</div>
+</body>
+</html>

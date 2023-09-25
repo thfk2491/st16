@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position2</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .wrap{
+      /*.box의 기준조상이 되기 위해서*/
+      position: relative;
+      margin: 100px;
+      padding: 100px;
+      border: 10px dotted #000;
+      background-color: #ccc;
+      box-sizing: border-box;
+      height: 2000px;
+    }
+    .box:nth-child(even){
+      background-color: #f68;
+    }
+    .box:nth-child(odd){
+      background-color: #86f;
+    }
+    .box{
+      width: 200px;
+      height: 200px;
+    }
+    .box1{
+      position: static;
+      left: 100px;
+      top: 100px; /*static은 left top right bottom 영향을 받지x*/
+    }
+    .box2{
+      /*일반흐름*/
+      position: relative;
+      left: 50px;
+      top: -50px;
+    }
+    .box3{
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      padding: 50px;
+      box-sizing: border-box;
+      border: 1px solid #000;
+    }
+    .box3 .inner{
+      padding: 16px;
+      background-color: #f00;
+    }
+    .box3 .inner p{
+      background-color: #00f;
+      position: absolute;
+      /* left: 0px; top: 0px; */
+      right: 30px; bottom: 50px;
+    }
+    .box4{
+      position: fixed;
+      left: 0px; top: 0px;
+    }
+    .box5{
+      position: fixed;
+      right: 0px; bottom: 0px;
+    }
+    .box6{
+      position: fixed;
+      left: 0px; top: 0px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="box box1">
+      <div class="inner">
+        <p>box1</p>
+      </div>
+    </div>
+    <div class="box box2">
+      <div class="inner">
+        <p>box2</p>
+      </div>
+    </div>
+    <div class="box box3">
+      <div class="inner">
+        <p>box3</p>
+      </div>
+    </div>
+    <div class="box box4">
+      <div class="inner">
+        <p>box4</p>
+      </div>
+    </div>
+    <div class="box box5">
+      <div class="inner">
+        <p>box5</p>
+      </div>
+    </div>
+    <div class="box box6">
+      <div class="inner">
+        <p>box6</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

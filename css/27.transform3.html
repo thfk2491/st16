@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transform3 - 크기변경</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .wrap{
+      margin: 50px;
+      box-sizing: border-box;
+    }
+    .out{
+      border: 1px solid #000;
+      background-color: #ccc;
+      padding: 50px;
+    }
+    .img-wrap{
+      border: 1px solid #f00;
+      background-color: #68f;
+      transform: scale(1);
+      overflow: hidden;
+    }
+    .img-wrap img{
+      width: 100%;
+      display: block;
+      transition: transform 0.2s;
+    }
+    .img-wrap:hover img{
+      transform: scale(1.2);
+      transition: transform 0.5s;
+      /* transition: all ease 2s 0s;  */
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="out">
+      <div class="img-wrap"><img src="asset/img/list1.jpg" alt=""></div>
+    </div>
+  </div>
+</body>
+</html>

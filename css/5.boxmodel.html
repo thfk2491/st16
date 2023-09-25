@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>boxmodel</title>
+  <!-- 외부의 css를 불러올때 -->
+  <link rel="stylesheet" href="asset/css/style1.css">
+  <style>
+    .box{
+      /* border-color: #000;
+      border-style: solid;
+      border-width: 1px; */
+      border: #000 dotted 10px;
+      border-top-color: #f00;
+      background-color: #ccc;
+      /* 안쪽여백 padding  상 우 하 좌 */
+      padding: 10px 20px 30px 40px;
+      /* 바깥쪽여백 margin 상 우 하 좌 */
+      /* margin: 50px; */
+    }
+    /* 클래스 .box 두번째 
+       padding을 상우하좌 50px 
+       padding : 상하 좌우;
+       padding : 상 좌우 하;
+    */
+
+    .box:nth-of-type(2){
+      padding: 28px 50px;
+      background-color: #f00;
+    }
+    h1{background-color: #f68;}
+    *{padding: 0; margin: 0;}
+    .box:nth-of-type(1){
+      margin: 50px;
+    }
+    .box:nth-of-type(2){
+      width: 300px;
+      margin: 100px auto;
+    }
+  </style>
+</head>
+<!-- 태그에 인라인으로 css 적용 -->
+<body>
+  <h1 class="page-title">웹폰트 사용</h1>
+  <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, dignissimos. Sunt officiis cupiditate dicta voluptatem obcaecati impedit, error nisi quam fugiat perferendis tempora iusto corporis ab assumenda optio ullam nesciunt.</div>
+  <!-- .box>lorem  -->
+  <div class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae ipsum, dolor placeat nesciunt temporibus modi sed eos ad iusto provident tempora, culpa distinctio quidem ratione, velit dolores. Vitae, ut a!</div>
+  <!-- ul>li*4>a>{text$}  -->
+  <ul>
+    <li><a href="">text1</a></li>
+    <li><a href="">text2</a></li>
+    <li><a href="">text3</a></li>
+    <li><a href="">text4</a></li>
+  </ul>
+  <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, aliquid. Sapiente provident quia perferendis eum! Ut incidunt, doloremque consequatur, nemo, magni debitis autem perferendis odit doloribus ducimus quibusdam sed corporis!</div>
+</body>
+</html>

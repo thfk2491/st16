@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>말줄임표 관련 css</title>
+  <style>
+    /* *{margi} */
+    .sample{
+      width: 400px;
+      margin: 100px auto;
+      box-sizing: border-box;
+      border: 1px solid #000;
+    }
+    .box{
+      padding: 30px;
+      background-color: #ccc;
+    }
+    .box p{
+      /* white-space: normal; */
+      white-space: nowrap ;
+      overflow: hidden;
+      text-overflow: ellipsis;  /*...*/
+
+      /* height: 150px; */
+      background-color: #f68;
+      margin-bottom: 50px;
+    }
+    .sample:nth-of-type(2) .box p{
+      height: 3rem;
+      white-space: nowrap ;
+      overflow: hidden;
+      text-overflow: clip;  /*끝까지 글씨로*/
+    }
+  </style>
+</head>
+<body>
+  <!-- .sample*2>.box>p*2>lorem*2 -->
+  <div class="sample">
+    <div class="box">
+      <p><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate tenetur impedit labore harum, ad deserunt ducimus fugit ut, quae officiis ullam perferendis, rem aperiam aliquam repudiandae dignissimos alias. Cupiditate, odit.</span><span>Libero doloremque animi nam inventore eaque. Distinctio, dolorem nemo? Odio quisquam harum, nam quas reiciendis distinctio esse laboriosam, consectetur ratione consequatur laborum? Neque unde, deserunt ad nostrum ea est debitis.</span></p>
+      <p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos deleniti, in nesciunt laboriosam nihil consequuntur velit totam, repudiandae quia dolorum unde sed vitae animi, cum ad dolorem porro libero! Minus?</span><span>Ab amet, facere rem, similique eaque officiis possimus sint eveniet sequi natus ipsum magnam cum. Non, qui mollitia magnam laboriosam nisi aspernatur vero dignissimos repellendus tenetur quis consectetur laudantium recusandae.</span></p>
+    </div>
+  </div>
+  <div class="sample">
+    <div class="box">
+      <p><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum est optio dolores nemo in debitis necessitatibus reiciendis porro sit aliquid, sapiente saepe praesentium, enim vitae laboriosam voluptates esse ratione ex.</span><span>Doloremque, dignissimos voluptate, autem incidunt exercitationem qui ipsum hic temporibus expedita minima repellat laboriosam inventore provident! Inventore, in sunt beatae odio, quae, quas at quo sapiente minima neque qui accusantium.</span></p>
+      <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione perferendis placeat atque eum, illo aut temporibus quaerat, laborum veritatis sint in! Molestias, omnis autem sequi temporibus ipsa commodi quo labore.</span><span>Expedita fugit sequi molestias veritatis quaerat laudantium! Animi vitae quae in possimus, deleniti nostrum ipsum beatae sint mollitia, quaerat natus optio quis perferendis, error vel assumenda at nobis temporibus blanditiis.</span></p>
+    </div>
+  </div>
+  <!-- .sample2>.content-wrap>p -->
+  <div class="sample2">
+    <div class="content-wrap">
+      <p>
+        모든 국민은 건강하고 쾌적한 환경에서 생활할 권리를 가지며, 국가와 국민은 환경보전을 위하여 노력하여야 한다. 대통령은 국가의 안위에 관계되는 중대한 교전상태에 있어서 국가를 보위하기 위하여 긴급한 조치가 필요하고 국회의 집회가 불가능한 때에 한하여 법률의 효력을 가지는 명령을 발할 수 있다. 이 헌법에 의한 최초의 대통령의 임기는 이 헌법시행일로부터 개시한다. 국민의 모든 자유와 권리는 국가안전보장·질서유지 또는 공공복리를 위하여 필요한 경우에 한하여 법률로써 제한할 수 있으며, 제한하는 경우에도 자유와 권리의 본질적인 내용을 침해할 수 없다. 정당의 목적이나 활동이 민주적 기본질서에 위배될 때에는 정부는 헌법재판소에 그 해산을 제소할 수 있고, 정당은 헌법재판소의 심판에 의하여 해산된다.
+      </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus delectus, ratione reprehenderit optio suscipit consequatur ab, quaerat aut adipisci voluptas dolores velit?</p>
+    </div>
+  </div>
+  <style>
+    .sample2{
+      width: 80%;
+      margin: auto;
+    }
+    .sample2 p{
+      text-align: center;
+      word-break: keep-all; /* 한글의 단어단위로 줄바꿈 */
+    }
+  </style>
+</body>
+</html>

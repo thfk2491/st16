@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테이블관련css</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .container{margin: 50px;}
+    table,tr,td,th{
+      box-sizing: border-box; /*표크기에 대한 계산이 편해짐*/
+    }
+    table.sample{
+      border-collapse: collapse; /*표에 space 정도의 간격을 없앨수 있음, 아코디언같은 느낌*/
+      table-layout: fixed; /*테이블과 셀에 너비를 지정할때 */
+      /* box-sizing: border-box; */
+      width: 100%;
+
+      border: 1px solid #000;
+      border-top: 10px solid #f86;
+    }
+    .sample tr:nth-child(1) th{
+      background-color: #000;
+      color: #fff;
+      padding: 1rem;
+    }
+    .sample tr:nth-child(1) td{vertical-align:middle ;}
+    .sample tr:nth-child(2) td{vertical-align:top ;}
+    .sample tr:nth-child(3) td{vertical-align:middle ;}
+    .sample tr:nth-child(4) td{vertical-align:bottom ;}
+
+    .sample tr:nth-child(even) td{
+      background-color: #efefef;
+    }
+    .sample tr:nth-child(odd) td{
+      background-color: #fff;
+    } 
+    .sample tr:hover td{
+      background-color: #68f;
+    }
+    .sample th,
+    .sample td{
+      padding: 1em;
+      border: 1px solid #000;
+      /* box-sizing: border-box;   */
+    }
+    .sample th:nth-child(1){
+      width: 12em;
+    }
+    .sample th:nth-child(3){
+      width: 150px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- table.sample>tr>th*3>{title$}^tr -->
+    <!-- table.sample>tr>th*3>{title$}^^tr -->
+    <!-- table.sample>tr>th*3>{title$}^^tr*3>td*3>lorem2 -->
+    <table class="sample">
+      <tr>
+        <th>title1</th>
+        <th>title2</th>
+        <th>title3</th>
+      </tr>
+      <tr>
+        <td>가나다 라마바 아자차</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati ut eveniet hic laborum ratione amet dolorum rem a laboriosam quis molestiae quos, voluptatum consectetur ullam aliquam perferendis. Exercitationem, facilis corrupti!
+        Ad, cumque doloribus sed nulla quia voluptatibus veniam temporibus laudantium dignissimos iure porro excepturi, voluptatem culpa nisi fuga ducimus qui velit debitis error. Incidunt ducimus sit beatae laboriosam natus similique.</td>
+        <td>Ut, laboriosam.</td>
+      </tr>
+      <tr>
+        <td>abc def ghi</td>
+        <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo deserunt, iusto magnam, numquam vitae vero suscipit, ut deleniti quia odit mollitia doloremque ratione. Nisi itaque incidunt esse illo doloribus ducimus!
+        Temporibus culpa molestiae fuga incidunt? Sit, illo saepe laboriosam a ducimus voluptas quis ab. Non, distinctio excepturi cumque quia eum harum quaerat, blanditiis id quo tempore nemo corporis. Ducimus, nam.</td>
+        <td>Assumenda, quaerat.</td>
+      </tr>
+      <tr>
+        <td>Lorem, ipsum.</td>
+        <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, culpa odit? Voluptas, consequuntur inventore deleniti temporibus sit modi officiis quam in vel eligendi maiores dolor aliquam harum? Vitae, nesciunt placeat.
+        In dolorem similique inventore error, perspiciatis vel at saepe repellendus itaque minus vero numquam ducimus quas soluta sunt harum laudantium tempora deserunt, quaerat earum dolorum placeat nulla enim. At, neque.</td>
+        <td>Et, ipsa.</td>
+      </tr>
+    </table>
+    
+  </div>
+</body>
+</html>

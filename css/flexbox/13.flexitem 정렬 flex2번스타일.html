@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13.flexitem 정렬 flex2번스타일</title>
+  <style>
+    *{margin: 0;padding: 0;box-sizing: border-box;}
+    .wrap{
+      margin-top: 50px;
+    }
+    header{
+      width: 100%;
+    }
+    .inner{
+      max-width: 1400px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo{
+      /* width: 200px; */
+      min-height: 100px;
+      background-color: #ccc;
+    }
+    .top-menu{
+      background-color: #e45348;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="inner container">
+        <div class="logo">logo</div>
+        <div class="top-menu">top-menu</div>
+      </div>
+    </header>
+  </div>
+</body>
+</html>

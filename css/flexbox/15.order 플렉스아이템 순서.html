@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>15.order 플렉스아이템 순서</title>
+  <style>
+    *{margin: 0; padding: 0;box-sizing: border-box;}
+    .wrap{
+      margin-top: 50px;
+    }
+    .parent{
+      background-color: #ccc;
+      padding: 30px;
+    }
+    .child{
+      background-color: rgba(0,0,255,0.5);
+      border: 1px solid #000;
+    }
+    /* 플렉스속성 */
+    .container{
+      width: 600px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+    }
+    .item{
+      flex: none;
+      width: 33.333%;
+      height: 100px;
+    }
+    .item1{order: 4;}
+    .item2{order: 1;}
+    .item3{order: 5;}
+    .item4{order: 2;}
+    .item5{order: 3;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="parent container">
+      <div class="child item1 item">item1</div>
+      <div class="child item2 item">item2</div>
+      <div class="child item3 item">item3</div>
+      <div class="child item4 item">item4</div>
+      <div class="child item5 item">item5</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Gothic:wght@400;700;800&display=swap');
+/* font-family: 'Nanum Brush Script', cursive;
+font-family: 'Nanum Gothic', sans-serif; */
+
+/* reset */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+select {
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  font-family: "Nanum Gothic", "나눔고딕", "Dotum", "돋움", "Helvetica", "Arial", "AppleSDGothicNeo", sans-serif;
+  font-size: 14px;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+img {
+  vertical-align: top;
+}
+
+li,
+ol,
+ul {
+  list-style: none;
+}
+
+address,
+em,
+i {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+th,
+b,
+em {
+  font-weight: normal;
+}
+/* 공통 */
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+body,
+html {
+  height: 100%;
+  font-style: normal;
+  line-height: 1.4;
+  -webkit-text-size-adjust: none;
+}
+.flex-container{
+  display: flex;
+}
+.item{
+  /* flex: none; */
+  background-color: rgba(0,0,255,0.5); /*테스트용*/
+  border: 1px solid #000;
+}
+.flex-direction-column{
+  flex-direction: column;
+}
+.test{
+  background-color: #00f;
+  min-height: 100px;
+}
+/* header */
+header{
+  position: fixed;
+  width: 100%;
+  left: 0;top: 0;
+  background-color: rgba(255,255,255,0.3);
+  border: 1px solid #000;
+}
+.header_wrap{
+  max-width: 1440px;
+  margin: 0 auto;
+  /* display: flex;   .flex-container 선언*/
+  justify-content: space-between;
+  align-items: center;
+}
+.header_wrap .header_logo a{
+  display: block;
+  width: 90px;
+  height: 20px;
+  /* background: url(../image/header_logo.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%; */
+  background: url(../image/header_logo.png) no-repeat 50% 50%;
+}
+/* container */
+.container{
+  padding: 80px 0 160px;
+  background-color: #ccc; /*테스트용*/
+}

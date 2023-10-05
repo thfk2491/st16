@@ -95,6 +95,24 @@ b,
 em {
   font-weight: normal;
 }
+/* 사용자지정속성
+    변수선언
+    선언형식
+    선택자{
+      --변수명:값;
+    }
+    선택자의 후손들은 다 상속
+
+    사용
+    선택자{
+      height:var
+    }
+*/
+:root{
+  --header-height:80px;
+  --primary-color: #1ec545;
+  --primary-color-dark:#0fb93c;
+}
 /* 공통 */
 .blind {
   position: absolute;
@@ -114,11 +132,6 @@ html {
 .flex-container{
   display: flex;
 }
-.item{
-  /* flex: none; */
-  background-color: rgba(0,0,255,0.5); /*테스트용*/
-  border: 1px solid #000;
-}
 .flex-direction-column{
   flex-direction: column;
 }
@@ -130,6 +143,7 @@ html {
 header{
   position: fixed;
   width: 100%;
+  height: var(--header-height);
   left: 0;top: 0;
   background-color: rgba(255,255,255,0.3);
   border: 1px solid #000;
@@ -150,8 +164,153 @@ header{
   background-position: 50% 50%; */
   background: url(../image/header_logo.png) no-repeat 50% 50%;
 }
+.header_wrap nav{
+  height: var(--header-height);
+}
+nav .gnb_menu{
+  font-size: 0;
+}
+nav .gnb_menu li.gnb_menu_list,
+.gnb_menu_list_recruit{
+  display: inline-block;
+}
+nav .gnb_menu a.gnb_menu_item{
+  position: relative;
+  font-size: 15px;
+  display: block;
+  line-height: var(--header-height);
+  margin: 0 30px;
+  color: #000;
+  font-weight: bold;
+}
+/* mouseover list */
+
+nav .gnb_menu li.gnb_menu_list a.gnb_menu_item::before{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  bottom: 1em;
+  transform-origin: 100% 0;
+  transition: transform 1s;
+  transform: scaleX(0);
+}
+nav .gnb_menu li.gnb_menu_list:hover a.gnb_menu_item::before{
+  transform: scaleX(1);
+  transition: transform 1s;
+  transform-origin: 0 0;
+}
+
+nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap{
+  /* depth2 , d1 마우스 호버할 때 드롭다운되는 메뉴 */
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background-color: var(--primary-color);
+  display: none;  /* 테스트 후 display:flex 로 변경*/ 
+  /* display: flex; */
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+}
+nav .gnb_menu .gnb_menu_list:nth-child(6) ul.gnb_dropMenu_wrap{
+  /* display: flex;
+  justify-content: center;
+  align-items: stretch; */
+}
+
+nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap > li{
+  position: relative;
+  font-size: 14px;
+  width: 190px;
+  height: 367px;
+  padding: 28px 0 0;
+}
+nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap > li:before{
+  content: '';
+  display: block;
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color:rgba(255,255,255,0.2);
+}
+nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap > li:last-child:after{
+  content: '';
+  display: block;
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color:rgba(255,255,255,0.2);
+}
+nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap > li:hover{
+  background-color: var(--primary-color-dark);
+}
+nav .gnb_menu .gnb_menu_list ul.gnb_dropMenu_wrap li .gnb_dropMenu{
+  /* padding-left: 2em; */
+}
+nav ul.gnb_dropMenu_wrap li .gnb_dropMenu .depth_blank{
+  margin-bottom: 14px;
+}
+nav ul.gnb_dropMenu_wrap li .gnb_dropMenu > li{
+  margin-bottom: 7px;
+  padding-left: 20px;
+}
+nav ul.gnb_dropMenu_wrap li .gnb_dropMenu .gnb_dropMenu_item{
+  color: #fff;
+}
+nav ul.gnb_dropMenu_wrap li .gnb_dropMenu .gnb_dropMenu_item strong span{
+  opacity: 1;  
+  font-weight: bold;
+}
+nav ul.gnb_dropMenu_wrap li .gnb_dropMenu .gnb_dropMenu_item span{
+  opacity: 0.8;
+}
+nav ul.gnb_dropMenu_wrap li .gnb_dropMenu .classify{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+  
+}
+nav ul.gnb_dropMenu_wrap li .gnb_dropMenu .classify:first-child{
+  padding-top: 0;
+  border-top: 0 none;
+}
+
+.header_util{}
+.header_util .header_lang{}
+.header_util .header_lang a{
+  position: relative;
+  color: #000;
+  opacity: 1;
+  font-size: 12px;
+  padding: 0 0.5em;
+}
+.header_util .header_lang a:first-child:after{
+  content: '';
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  right: -3px;
+  top: 0;
+}
+.header_util .header_lang a[aria-selected="false"]{
+  opacity: 0.7;
+}
+
+
+
 /* container */
 .container{
   padding: 80px 0 160px;
   background-color: #ccc; /*테스트용*/
+  
 }

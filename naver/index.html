@@ -476,7 +476,66 @@
         <div class="swiper-scrollbar"></div>
       
       </div>
-      <div class="main_content"></div>
+      <div class="main_content">
+        <ul class="content_summary">
+          <!-- content_summary 첫번째 -->
+          <li class="summary_container">
+            <h3 class="summary_title">news</h3>
+            <div class="desc_box">
+              <div class="news_box">
+                <a href="javascript:;" onclick="recentPressView('31415'); return false;">
+                  <strong class="news_title">네이버, ‘테크 컨버전스 빌딩’ 1784 찾은 사우디 통신정보기술부 장관과 미래 기술 논의</strong>
+                  <!-- [D] .news_text 2줄 말줄임 처리 -->
+                  <p class="news_text">
+                    네이버, ‘테크 컨버전스 빌딩’ 1784&nbsp;찾은 사우디 통신정보기술부 장관과 미래 기술 논의
+                    -&nbsp;지난해&nbsp;11월 자치행정주택부 장관 이어&nbsp;1784&nbsp;찾은 사우디 정부 부처 장관으로는 두 번째
+                    -&nbsp;자치행정주택부와는&nbsp;‘디지털 전환’ MOU&nbsp;맺어…&nbsp;사우디 정부 주요 관계자들 방문 꾸준해
+                    &nbsp;
+                    2023-10-06
+                    &nbsp;
+                    세계 최초의 로봇 친화
+                  </p>
+                </a>
+              </div>
+            </div>
+            <a href="" class="summary_link">바로가기<span class="icon_arrow"></span></a>
+          </li>
+          <!-- content_summary 두번째 -->
+          <li class="summary_container">
+            <h3 class="summary_title">career</h3>
+            <div class="desc_box">
+              <p class="career_text">수 많은 사용자의 목소리에서<br>내 일의 자부심과 무게를 느낍니다.</p>
+            </div>
+            <a href="" class="summary_link">네이버에서 일한다는 것<span class="icon_arrow"></span></a>
+          </li>
+          <!-- content_summary 세번째 -->
+          <li class="summary_container">
+            <h3 class="summary_title">stock</h3>
+            <div class="desc_box">
+              <div class="summary_stock">
+                <div class="stock_info_box">
+                  <!-- [D] .stock_price_box노출 후 on클래스 추가 -->
+                  <div class="stock_price_box on">
+                    <p class="price">194,100<span class="unit">원</span></p>
+                    <!-- [D] .figure에 클래스 추가 상한 = type1 / 상승 = type2  / 하한 = type4 / 하락 = type5 -->
+                    <span class="figure type2">2,900</span>
+                  </div>
+                  <p class="date">KRX 2023.10.11</p>
+                </div>
+              </div>
+            </div>
+            <a href="/investment/stock" class="summary_link">주가정보<span class="icon_arrow"></span></a>
+          </li>
+          <!-- content_summary 네번째 -->
+          <li class="summary_container">
+            <h3 class="summary_title">결산 공고</h3>
+            <div class="desc_box">
+              <p class="career_text">네이버의 재무상태표를 확인<br class="break"> 할 수 있습니다.</p>
+            </div>
+            <a href="" class="summary_link">결산공고 보러가기<span class="icon_arrow"></span></a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>

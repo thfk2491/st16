@@ -1,0 +1,48 @@
+.xans-myshop-main .group { background:#f6f5f3; text-align:center; box-sizing:border-box; }
+.xans-myshop-benefit { display:none; }
+.orderListView + .xans-myshop-main { top:137px; }
+.orderListView + .xans-myshop-main .xans-myshop-benefit { display:block; }
+.myshopArea .titleArea--middle h3 .desc { font-weight:normal; color:#6d6d6d; }
+.myshopArea .titleArea--middle h3 .txtEm { font-weight:normal; color:#000; }
+
+/********************* Mobile / Tablet *********************/
+@media all and (max-width:1024px) {
+    /* myshop layout */
+    .myshopMain > .xans-myshop-benefit > .group { display:block; padding:18px 16px; background:#f6f5f3; position:relative; }
+    .myshopMain > .xans-myshop-benefit > .group .data { font-size:16px; vertical-align:middle; padding: 0 0 0 38px; }
+    .myshopMain > .xans-myshop-benefit > .group .thumb { position:absolute;  top:15px; left:16px; }
+    .myshopMain > .xans-myshop-benefit > .group .thumb svg,
+    .myshopMain > .xans-myshop-benefit > .group .thumb img { width:30px; height:30px; }
+    .xans-myshop-main .group { display:none; }
+    .xans-myshop-main .subTitle { padding:30px 16px 12px; }
+    .xans-myshop-main .xans-myshop-benefit + .subTitle { padding-top:60px; }
+    .xans-myshop-main h3 { color:#000; color:var(--font-color-heading); font-size:16px; }
+    .xans-myshop-main .menu { border-top:1px solid #000; }
+	.xans-myshop-main .menu li a { position:relative; display:block; padding:16px; font-size:14px; text-decoration:none; color:#999999; }
+    .xans-myshop-main .menu li a:after { content:""; display:block; position:absolute; top:3px; right:18px; width: 10px; height: 10px; margin: 18px auto 0; border-left: 1px solid #929292; border-bottom: 1px solid #929292; -webkit-transform: rotate(-135deg); transform: rotate(-135deg); }
+    .xans-myshop-main .consult { margin:23px 16px 0; }
+    .xans-myshop-main .consult .btnNormal { width:100%; }
+}
+
+/********************* PC *********************/
+@media all and (min-width:1025px) {
+    /* myshop layout */
+    .myshopArea { position:relative; min-height:750px; margin:39px 0 0; padding:0 0 0 210px; }
+    .xans-myshop-main { position:absolute; left:0; top:95px; width:200px; }
+    .xans-myshop-main .group { width:165px; height:165px; padding:38px 48px;}
+    .xans-myshop-main .group .data { display:block; margin-top:16px; font-size:16px;  }
+    
+    .xans-myshop-main .title {  font-size:30px; }
+    .myshopMain .titleArea.titleArea--myshop h2 { line-height:1; }
+    .xans-myshop-main .subTitle { margin:50px 0 20px; }
+    .xans-myshop-main .subTitle:first-child { margin-top:0px; }
+    .xans-myshop-main h3 { color:#000; color:var(--font-color-heading); font-size:16px; font-weight:normal; font-weight:bold; }
+    .xans-myshop-main .menu li { margin:11px 0 0; }
+	.xans-myshop-main .menu li a { display:block; color:#999999; font-size:14px; text-decoration:none; }
+    .xans-myshop-main .consult { margin:45px 0 0; }
+    .xans-myshop-main .consult .btnNormal { padding:14px 47px; }
+    .xans-myshop-likeitcatepackage { position: relative; min-height: 750px; margin: 39px 0 0; padding: 0 0 0 210px; }
+    .xans-myshop-likeitcatepackage .titleArea { margin: 50px 0 100px; text-align: center; padding-right: 22%; }
+    
+
+}

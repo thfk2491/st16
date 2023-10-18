@@ -1,0 +1,342 @@
+<!--@layout(/layout/basic/main.html)-->
+
+<section class="mainVisual" module="custom_moduleedit_1">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="item">
+                    <div class="here">
+                        <h2 id="mainText" class="text"><span>SIGNATURE</span></h2>
+                        <h4 class="subText"><span>STORE</span><h4>
+                        <a href="/product/list.html?cate_no=24" class="button">MORE</a>
+                    </div>
+                    <!-- PC image -->
+                    <picture class="RW">
+                        <source srcset="//img.echosting.cafe24.com/skinTheme/business/ko_KR/main/Visual_01.webp" type="image/webp">
+                        <img src="//img.echosting.cafe24.com/skinTheme/business/ko_KR/main/Visual_01.jpg" width="100%" height="100%" alt="main banner"/>
+                    </picture>
+                    <!-- tablet image -->
+                    <picture class="RTB">
+                        <source srcset="//img.echosting.cafe24.com/skinTheme/business/ko_KR/main/Visual_01_t.webp" type="image/webp" />
+                        <img src="//img.echosting.cafe24.com/skin/skinTheme/business/ko_KR/main/Visual_01_t.jpg" width="100%" height="100%" alt="main banner"/>
+                    </picture>
+                    <!-- mobile image -->
+                    <picture class="RMB">
+                        <source srcset="//img.echosting.cafe24.com/skinTheme/business/ko_KR/main/Visual_01_m.webp" type="image/webp" />
+                        <img src="//img.echosting.cafe24.com/skinTheme/business/ko_KR/main/Visual_01_m.jpg" width="100%" height="100%" alt="main banner"/>
+                    </picture>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="item">
+                    <div class="here">
+                        <h2 id="mainText" class="text"><span>SIGNATURE</span></h2>
+                        <h4 class="subText"><span>STORE</span><h4>
+                        <a href="/product/list.html?cate_no=24" class="button">MORE</a>
+                    </div>
+                    <!-- PC image -->
+                    <picture class="RW">
+                        <source srcset="//img.echosting.cafe24.com/skinTheme/business/ko_KR/main/Visual_02.webp" type="image/webp">
+                        <img src="//img.echosting.cafe24.com/skinTheme/business/ko_KR/main/Visual_02.webp" width="100%" height="100%" alt="main banner"/>
+                    </picture>
+                    <!-- tablet image -->
+                    <picture class="RTB">
+                        <source srcset="//img.echosting.cafe24.com/skinTheme/business/ko_KR/main/Visual_02_t.webp" type="image/webp" />
+                        <img src="//img.echosting.cafe24.com/skin/skinTheme/business/ko_KR/main/Visual_02_t.jpg" width="100%" height="100%" alt="main banner"/>
+                    </picture>
+                    <!-- mobile image -->
+                    <picture class="RMB">
+                        <source srcset="//img.echosting.cafe24.com/skinTheme/business/ko_KR/main/Visual_02_m.webp" type="image/webp" />
+                        <img src="//img.echosting.cafe24.com/skinTheme/business/ko_KR/main/Visual_02_m.jpg" width="100%" height="100%" alt="main banner"/>
+                    </picture>
+                </div>    
+            </div>
+        </div>
+        <div class="swiper-control">
+            <div class="swiper-pagination"></div>
+            <button type="button" class="swiper-button-pause">멈춤</button>
+            <button type="button" class="swiper-button-play">재생</button>
+        </div>
+        <div class="swiper-button-next">다음</div>
+        <div class="swiper-button-prev">이전</div>
+    </div>
+</section>
+
+<!-- brand -->
+<section class="brand">
+    <div class="brand-content title">
+        <h2 class="text">BRAND</h2>
+        <h3 class="text">당신의 이야기가 담긴 <br> 특별한 공간<h3>
+        <p>머무는 공간은 작품이 되고 매일의 일상은 예술이 되다. <br> 세상과는 다른 당신만의 색으로 당신만의 가치를 표현하는 공간.</p>
+        <a href="/layout/basic/brand.html" class="button">MORE</a>
+    </div>
+</section>
+<!-- brand -->       
+  
+<!-- product -->      
+<section class="product">       
+<div module="product_listmain_1" class="productItem ec-base-product">
+    <!--
+        $count = 4
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+        $moreview = yes
+        $cache = no
+    -->
+    <div class="title">
+        <h2 class="text">
+            <span style="display: {$category_title_text_display};">{$category_title_text}</span>
+            <span style="display: {$category_title_img_display};"><img src="{$category_title_img}" alt="{$category_title_text}"/></span>
+        </h2>
+        <p>
+            <span>우리의 시그니처 상품을 만나보세요.</span>
+        </p>
+    </div>
+
+    <ul class="prdList grid3">
+        <li id="anchorBoxId_{$product_no}">
+            <div class="prdList__item">
+                <div class="thumbnail">
+                    <a href="{$link_product_detail}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" loading="lazy" width="100%" height="100%"><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+                    <div class="icon__box displaynone">
+                        <span class="wish">{$list_wish_icon}</span>
+                        <span class="cart">{$basket_icon}</span>
+                    </div>
+                    <span class="benefit">{$benefit_icons}</span>
+                </div>
+                <div class="description">
+                    <strong class="name"><a href="{$link_product_detail}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                    <ul module="product_ListItem" class="spec">
+                        <li class="{$item_display|display}">
+                            <strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}
+                        </li>
+                        <li class="{$item_display|display}">
+                            <strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}
+                        </li>
+                    </ul>
+                    <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon}</div>
+                </div>
+            </div>
+        </li>
+        <li id="anchorBoxId_{$product_no}">
+            <div class="prdList__item">
+                <div class="thumbnail">
+                    <a href="{$link_product_detail}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" loading="lazy" width="100%" height="100%"><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+                    <div class="icon__box displaynone">
+                        <span class="wish">{$list_wish_icon}</span>
+                        <span class="cart">{$basket_icon}</span>
+                    </div>
+                    <span class="benefit">{$benefit_icons}</span>
+                </div>
+                <div class="description">
+                    <strong class="name"><a href="{$link_product_detail}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a></strong>
+                    <ul module="product_ListItem" class="spec">
+                        <li class="{$item_display|display}">
+                            <strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}
+                        </li>
+                        <li class="{$item_display|display}">
+                            <strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}
+                        </li>
+                    </ul>
+                    <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon}</div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <a href="/product/list.html?cate_no=24" class="button">ALL VIEW</a>
+</div>
+<div module="product_listmore_1" class="more displaynone">
+    <a href="#none" onclick="{$more_action}" class="btnMore">
+        더보기<span id="more_current_page_{$display_group}">{$current_page}</span>/<span id="more_total_page_{$display_group}">{$total_page}</span>
+        <i aria-hidden="true" class="icon icoArrowBottom"></i>
+    </a>
+</div>
+
+<!-- image slide -->
+<div class="productSlide">
+    <div class="item-wrapper">
+        <!--div class="banner" module="custom_moduleedit_5">
+            <picture>
+                <source srcset="//img.echosting.cafe24.com/skin/skin_ko_KR/main/img_newIn.webp" type="image/webp">
+                <img src="//img.echosting.cafe24.com/skin/skin_ko_KR/main/img_newIn.jpg" alt="banner" loading="lazy" width="100%" height="100%">
+            </picture>
+        </div-->
+        <div module="product_listmain_1" class="ec-base-product">
+            <!--
+                $count = 20
+                ※ 상품진열갯수를 설정하는 변수입니다. 설정하지 않을 경우, 최대 200개의 상품이 진열 됩니다.
+                ※ 진열된 상품이 많으면, 쇼핑몰에 부하가 발생할 수 있습니다.
+                ※ Variable to set number of product display. If not set, up to 200 items will be displayed.
+                ※ If many products are displayed, shopping malls can become overloaded.
+            -->
+            <span class="title">
+                <h2 class="text">
+                    <span style="display: {$category_title_text_display};">{$category_title_text}</span>
+                    <span style="display: {$category_title_img_display};"><img src="{$category_title_img}" alt="{$category_title_text}"/></span>
+                </h2>
+                <p>
+                	<span>우리의 시그니처 상품을 만나보세요.</span>
+                </p>	
+            </span>
+            <div class="swiper-container swiper-lazy-init">
+                <ul class="swiper-wrapper prdList">
+                    <li id="anchorBoxId_{$product_no}" class="swiper-slide">
+                        <div class="prdList__item">
+                            <div class="thumbnail">
+                                <a href="{$link_product_detail}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" loading="lazy" width="100%" height="100%"><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+                                <div class="icon__box">
+                                    <span class="wish">{$list_wish_icon}</span>
+                                    <span class="cart">{$basket_icon}</span>
+                                </div>
+                                <span class="benefit">{$benefit_icons}</span>
+                            </div>
+                            <div class="description">
+                                <strong class="name {$product_name_display|display}"><a href="{$link_product_detail}">{$product_name}</a></strong>
+                                <ul module="product_ListItem" class="spec">
+                                    <li class="{$item_display|display}">
+                                        <strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}
+                                    </li>
+                                    <li class="{$item_display|display}">
+                                        <strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}
+                                    </li>
+                                </ul>
+                                <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon}</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="anchorBoxId_{$product_no}" class="swiper-slide">
+                        <div class="prdList__item">
+                            <div class="thumbnail">
+                                <a href="{$link_product_detail}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" loading="lazy" width="100%" height="100%"><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+                                <div class="icon__box">
+                                    <span class="wish">{$list_wish_icon}</span>
+                                    <span class="cart">{$basket_icon}</span>
+                                </div>
+                                <span class="benefit">{$benefit_icons}</span>
+                            </div>
+                            <div class="description">
+                                <strong class="name {$product_name_display|display}"><a href="{$link_product_detail}">{$product_name}</a></strong>
+                                <ul module="product_ListItem" class="spec">
+                                    <li class="{$item_display|display}">
+                                        <strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}
+                                    </li>
+                                    <li class="{$item_display|display}">
+                                        <strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}
+                                    </li>
+                                </ul>
+                                <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon}</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="swiper-scrollbar displaynone"></div>
+                <div class="swiper-button-next"><!--@import(/svg/icon-arrow-right.html)--></div>
+                <div class="swiper-button-prev"><!--@import(/svg/icon-arrow-left.html)--></div>
+            </div>
+        </div>
+    </div>
+    <a href="/product/list.html?cate_no=24" class="button">ALL VIEW</a>
+</div>
+<!-- //image slide -->
+</section>
+<!-- //product -->  
+    
+
+<section class="middleBanner">
+    <picture>
+        <source srcset="//img.echosting.cafe24.com/skinTheme/business/ko_KR/main/midBanner_line.webp" type="image/webp">
+        <img src="//img.echosting.cafe24.com/skinTheme/business/ko_KR/main/midBanner_line.png" alt="middle banner"/>
+    </picture>
+    <div class="banner">
+         <div class="text">
+             세상에 단 하나뿐인 <br> 특별함을 만나보세요.
+             <p>기업의 정보나 메세지를 전달해주세요.</p>
+         </div>
+    </div>
+</section>    
+
+        
+<!-- Event -->     
+<section class="event">
+    <div module="Board_ListPackage_8">
+        <div class="boardSort">
+            <span module="board_category_8">{$form.board_category}</span>
+        </div>
+
+        <div module="board_title_8">
+            <div class="title">
+                <h2 class="text">{$board_name}</h2>
+                <p>다양한 이벤트 내용이나 갤러리로 꾸며보세요.</p>
+            </div>
+            <p class="imgArea">{$board_top_image}</p>
+        </div>
+
+        <ul module="board_listheader_8">
+            <li><a class="{$list_type_display|display}" href="/board/gallery/list.html{$param_list}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/btn_type_image.gif" alt="이미지형으로 보기"></a></li>
+            <li><a class="{$list_type_display|display}" href="/board/gallery/list2.html{$param_list}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/btn_type_list.gif" alt="리스트형으로 보기"></a></li>
+        </ul>
+
+        <div class="notice">
+            <div module="board_notice_8">
+                <!--
+                    $login_page_url = /member/login.html
+                    $deny_access_url = /index.html
+                -->
+                <ul>
+                    <li>
+                        <a href="/board/gallery/read.html{$param_read}" class="imgLink"><img src="{$img_src}" onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="/board/gallery/read.html{$param_read}" class="imgLink"><img src="{$img_src}" onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'" alt="" /></a>
+                    </li>
+                </ul>
+            </div>
+            <div module="board_fixed_8">
+                <!--
+                    $login_page_url = /member/login.html
+                    $deny_access_url = /index.html
+                -->
+                <ul>
+                    <li>
+                        <a href="/board/gallery/read.html{$param_read}" class="imgLink"><img src="{$img_src}" onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'" alt="" /></a>
+                    </li>
+                    <li>
+                        <a href="/board/gallery/read.html{$param_read}" class="imgLink"><img src="{$img_src}" onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'" alt="" /></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div module="board_list_8">
+            <!--
+                $count = 2
+                $login_page_url = /member/login.html
+                $deny_access_url = /index.html
+            -->
+            <ul>
+                <li>
+                    <a href="/board/gallery/read.html{$param_read}" class="imgLink"><img src="{$img_src}" onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'" alt="" /></a>
+                    <a href="/board/gallery/read.html{$param_read}" class="imgLink">{$subject} {$comment_count}</a>
+                </li>
+                <li>
+                    <a href="/board/gallery/read.html{$param_read}" class="imgLink"><img src="{$img_src}" onerror="this.src='http://img.echosting.cafe24.com/skin/base_ko_KR/board/@img_gallery.gif'" alt="" /></a>
+                    <a href="/board/gallery/read.html{$param_read}" class="imgLink">{$subject} {$comment_count}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="boardListEmpty {$empty_display|display}" module="board_empty_2">
+            <p>
+                {$empty_message}
+            </p>
+        </div>
+
+<!--        <div module="board_ButtonList_2" class="{$write_display|display}">
+            <a href="/board/gallery/write.html{$param_write}" class="{$write_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/btn_write.gif" alt="글쓰기" /></a>
+        </div> -->
+    </div>
+    <a href="/board/gallery/list.html" class="button">ALL VIEW</a>
+</section>
+<!-- event -->
+
+
+<!--@define(cmc_log)-->

@@ -1,0 +1,5 @@
+/* #header.fixed 수정 시작 */
+#main #header.fixed{
+  background-color: rgba(255,255,255,0.7);
+}
+/* #header.fixed 수정 완료 */

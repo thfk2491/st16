@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플렉스 복습2</title>
+  <style>
+    *{padding: 0;margin: 0;}
+    .wrap{margin: 50px;}
+    .flex-container{
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      /* align-items: flex-start; */
+      align-content: flex-start;
+      flex-wrap: wrap;
+      border: 1px solid #000;
+      background-color: #999;
+    }
+    .flex-item{
+      flex: none;
+      box-sizing: border-box;
+      border: 1px solid #f00;
+      background-color: #f6c;
+
+    }
+    .flex-item:nth-child(1){width: 400px;}
+    .flex-item:nth-child(2){width: calc(100% - 400px);}
+    .flex-item:nth-child(3){width: 400px; padding-top: 50px; padding-bottom: 50px;}
+    .flex-item:nth-child(4){width: calc(100% - 400px); padding-top: 50px; padding-bottom: 50px;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="flex-container">
+      <div class="flex-item">item</div>
+      <div class="flex-item">item</div>
+      <div class="flex-item">item</div>
+      <div class="flex-item">item</div>
+    </div>
+  </div>
+</body>
+</html>

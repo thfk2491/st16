@@ -1,0 +1,107 @@
+/* footer 수정 css 시작 */
+#footer{
+  --my-footer-logo-width:400px;
+  --my-footer-inner-padding-top:70px;
+}
+#footer .inner{
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  position: relative;
+  padding-top: var(--my-footer-inner-padding-top);
+}
+
+/* footer 1 content */
+#footer .inner .bt_logo{
+  flex:none;
+  order: 1;
+  width: var(--my-footer-logo-width);
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+
+#footer .inner .bt_util{
+  flex: none;
+  order: 2;
+  width: calc(100% - var(--my-footer-logo-width));
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+#footer .inner .bt_util ul li a{
+  line-height: 36px;
+}
+#footer .inner .bt_wrap,
+#footer .inner .bt_wrap2 {
+  padding-top: 40px;
+}
+#footer .inner .bt_wrap {
+  order: 4;
+  width: calc(100% - var(--my-footer-logo-width));
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+#footer .inner .bt_wrap .bt_info {
+  margin-top: 0;
+}
+
+#footer .inner .bt_wrap .bt_info .title {
+  display: none; /*추가*/
+}
+#footer .inner .bt_wrap .bt_cscenter{
+  position: absolute;
+  right: 0;
+  top: var(--my-footer-inner-padding-top);
+
+
+}
+#footer .inner .bt_wrap .bt_cscenter .title{font-size: 1.2em;}
+#footer .inner .bt_wrap .bt_cscenter .bt_txt01 span:last-child{
+  font-size:2em;
+  line-height: 1;
+}
+#footer .inner .bt_wrap .bt_cscenter .pdr10,
+#footer .inner .bt_wrap .bt_cscenter strong {
+  display: none;
+}
+#footer .inner .bt_wrap .bt_cscenter .bt_txt02:nth-of-type(2){
+  display: none;
+}
+#footer .inner .bt_wrap .bt_cscenter .bt_txt02:nth-of-type(3)>span>span {
+  display: block;
+}
+
+
+#footer .inner .bt_wrap .bt_bank {
+  display: none;
+}
+/* #footer  content */
+#footer .inner .bt_escrow {
+  order: 5;
+  box-sizing: border-box;
+}
+
+#footer .inner .bt_wrap2{
+  order: 3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: var(--my-footer-logo-width);
+  box-sizing: border-box;
+  border-top: 0;
+}
+#footer .inner .bt_wrap2 .bt_copyright {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  text-align: center;
+  order: 2;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#footer .inner .bt_wrap2 .bt_sns {
+  order: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* footer 수정 완료 */

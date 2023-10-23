@@ -27,7 +27,7 @@ window.addEventListener('load', function(){
           ticking = true;
     });
   }
-  function fixedHeader() {
+  function fixedHeader() { 
       var header = document.getElementById("header");
     var scrollY = window.pageYOffset || document.documentElement.scrollTop;
       if(scrollY > header.offsetTop) {

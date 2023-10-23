@@ -1,0 +1,47 @@
+ 	<div class='Dr_Top_Bg'>
+        <div class='Dr_Top_Wrap'>
+            <div class='Dr_Top_Inner'>
+                <div class='Dr_Top_L'>
+                    <ul>
+                        <li><a href='/shopinfo/company.html'>ABOUT US</a></li>
+                        <li><a href='/product/list.html?cate_no=24'>SHOP</a>
+                            <div id="category" module="Layout_category">
+                                <!--@css(/css/module/layout/category.css)-->
+                                <!--@js(/js/module/layout/category.js)-->
+                                <div class="position">
+                                    <ul>
+                                        <li><a href="/product/list.html{$param}">{$name_or_img_tag}</a></li>
+                                        <li><a href="/product/list.html{$param}">{$name_or_img_tag}</a></li>
+                                        <li><a href="/product/list.html{$param}">{$name_or_img_tag}</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href=''>COMMUNITY</a></li>
+                    </ul>
+                </div>
+                <div class='Dr_Top_M'>
+                    <h1 module="Layout_LogoTop">
+                        <!--@css(/css/module/layout/logotop.css)-->
+                        <a href="/index.html"><img src="{$logo}" alt="{$mall_name}" /></a>
+                    </h1>
+                </div>
+                <div class='Dr_Top_R'>
+                    <ul module="Layout_stateLogon">
+                        <li><a href='/member/modify.html'>Myinfo</a></li>
+                        <li><a href='{$action_logout}'>LogOut</a></li>
+                        <li><a href='/order/basket.html'>Basket<span class="count {$basket_count_display|display}"><span>{$basket_count}</span></span></a></li>
+                        <li><a href='/myshop/order/list.html'>Order</a></li>
+                        <li><a href='/myshop/index.html'>MyShop</a></li>
+                    </ul>
+                    <ul module="Layout_statelogoff">                    
+                        <li><a href='/member/login.html'>Login</a></li>
+                        <li><a href='/member/join.html'>Join</a></li>
+                        <li><a href='/order/basket.html'>Basket<span class="count {$basket_count_display|display}"><span>{$basket_count}</span></span></a></li>
+                        <li><a href='/myshop/order/list.html'>Order</a></li>
+                        <li><a href='/myshop/index.html'>MyShop</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>

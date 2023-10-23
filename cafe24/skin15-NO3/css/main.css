@@ -1,0 +1,42 @@
+.DrmainBannerWrap {width:100%; margin:20px 0 0 0;}
+.DrBannerBox {width:1400px; margin:0 auto }
+.DrBannerBox:after {content:''; display:block; clear:both;}
+.DrBannerBox > div {float:left;}
+.DrBannerBox .DrBannerL {width:680px; margin:0 20px 0 0;}
+.DrBannerBox .DrBannerR {width:700px;}
+.DrBannerBox .DrBannerR .bannerUp{margin:0 0 20px 0;}
+.DrBannerBox .DrBannerR .bannerDown{}
+.DrBannerBox .DrBannerR .bannerDown > div {float:left;}
+.DrBannerBox .DrBannerR .bannerDown > div:nth-child(1) {margin:0 20px 0 0;}
+.DrBannerBox .DrBannerR .bannerDown:after {content:''; display:block; clear:both;}
+.Drcont {width:1400px; margin:0 auto;}
+.Drcont .Drpro1 {margin:50px 0 0 0;}
+.Drcont .Drpro2 {margin:50px 0 0 0;}
+.Dr_fixed_Bg {width:100%; height:500px; background:url('/img/7.jpg') repeat center center; background-attachment:fixed; margin:100px 0; background-size:cover;}
+.DrmiddleBox {width:100%;}
+.DrmiddleBox .DrmiddleBoxInner {width:1400px; margin:50px auto;}
+.DrmiddleBox .DrmiddleBoxInner:after {content:''; display:block; clear:both;}
+.DrmiddleBox .DrmiddleBoxInner > div {float:left;}
+.DrmiddleBox .DrmiddleBoxInner > div:nth-child(1) {margin:0 20px 0 0;}
+.Drcont .Drpro3 {margin:50px 0 0 0;}
+@supports (-ms-ime-align:auto){
+    html{
+        overflow: hidden;
+        height: 100%;       
+    }
+    body{
+        overflow: auto;
+        height: 100%;
+        position: relative;
+    }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+    html{
+        overflow: hidden;
+        height: 100%;    
+    }
+    body{
+        overflow: auto;
+        height: 100%;
+    }
+}

@@ -1,0 +1,6 @@
+.kakaoWrap {}
+.kakaoWrap > h3 {font-size:1.6rem; text-align:center; padding:20px 0;}
+.kakaoWrap > p {font-size:1rem; text-align:center; margin:50px 0; line-height:30px;}
+.kakaoWrap > ul {width:100%; text-align:center; padding:100px 0; background:#f1f1f1; border-radius:20px;}
+.kakaoWrap > ul > li {display:inline-block; width:40%; box-sizing:border-box; padding:0 20px;}
+.kakaoWrap > ul > li > img {width:100%;}

@@ -1,0 +1,19 @@
+/* #header.fixed 수정 끝 */
+
+/*topbanner 시작*/
+#topBanner { position:relative; overflow:hidden; height:38px; text-align:center; background:#000; z-index:1500; }
+#topBanner .desc { overflow:hidden; height:16px; margin:11px 56px; font-size:12px; color:#fff; box-sizing:border-box; }
+#topBanner .btnClose { position:absolute; right:50px; top:10px; width:13px; height:13px; background:none; overflow:hidden; white-space:nowrap; text-indent:150%; font-size:1px; color:transparent; line-height:1px; }
+#topBanner.hidden { display:none; }
+/*css icon*/
+#topBanner .icon.icoClose { display:block; position:relative; overflow:hidden; width:15px; height:15px; margin:0 auto; font-size:1px; line-height:0; color:transparent; white-space:nowrap; -webkit-transform:rotate(45deg); transform:rotate(45deg); }
+#topBanner .icon.icoClose:before { content:""; position:absolute; top:0; right:7px; width:1px; height:15px; background:#000; -webkit-transition:.3s ease-out; transition:.3s ease-out; }
+#topBanner .icon.icoClose:after { content:""; position:absolute; top:7px; right:0; width:15px; height:1px; background:#000; -webkit-transition:.3s ease-out; transition:.3s ease-out; }
+#topBanner .icon.icoClose.white:before,
+#topBanner .icon.icoClose.white:after { background:#fff; }
+
+@media all and (max-width:1024px) {
+      #topBanner { height:auto; }
+    #topBanner .desc { overflow:visible; height:auto; line-height:1.67; }
+    #topBanner .btnClose { right:16px; top:12px; }
+    }

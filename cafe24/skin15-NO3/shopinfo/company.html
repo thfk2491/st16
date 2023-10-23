@@ -1,0 +1,59 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>About US</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2>About US</h2>
+</div>
+
+<div module="mall_company">
+    <!--@css(/css/module/mall/company.css)-->
+    <div class='mall_companyL'>
+        <div app4you-smart-banner="smart-banner-admin-PC00002" class="-xans-element- xans-smart-banner-admin xans-smart-banner-admin-PC00002"></div>
+    </div>
+    <div class='mall_companyR'>
+        <h3>Design DR</h3>
+        <p>
+            안녕하세요. 디자인디알입니다.<br>
+            무료로 배포하는 NO3 스킨 이쁘게 잘 사용해주세요<br>
+            깔끔하고 세련되게끔 디자인을 했습니다.<br>
+        </p>
+        <p>
+            카페24 사용이 처음이시거나, 혼자서 셋팅하여 사용하기 어렵다면<br>
+            저희 디자인DR로 셋팅요청을 해주세요.<br>
+            저희측 전문가가 빠르게 셋팅을 해드리고 사용법도 안내드립니다.<br>
+        </p>
+        <p>            
+            사이트 : www.designdr.co.kr<br>
+            카카오톡 : DR디자인<br>
+            감사합니다.<br>
+        </p>
+    </div>
+</div>
+<div class='DRmap'>
+    <h3>오시는길 | Location</h3>
+    <div id="daumRoughmapContainer1564649216514" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+    <script charset="UTF-8">
+        new daum.roughmap.Lander({
+            "timestamp" : "1564649216514",
+            "key" : "ukgp",
+            "mapWidth" : "1400",
+            "mapHeight" : "500"
+        }).render();
+    </script>
+</div>
+<div class='companyinfo'>
+    <h3>Company Info</h3>
+    <ul module="Layout_footer">
+        <li><span>ADDRESS</span> {$mall_zipcode} {$mall_addr1} {$mall_addr2}</li>
+        <li><span>E-MAIL</span> {$email}</li>
+        <li><span>TEL</span> {$phone}</li>
+        <li><span>FAX</span> {$fax}</li>
+    </ul>
+</div>

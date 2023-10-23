@@ -17,3 +17,19 @@
     #topBanner .desc { overflow:visible; height:auto; line-height:1.67; }
     #topBanner .btnClose { right:16px; top:12px; }
     }
+
+/* 띠배너 시 헤더 수정 */
+#header.Dr_Top_Bg .Dr_Top_Wrap{
+  position: relative;
+}
+#header.Dr_Top_Bg.fixed .Dr_Top_Wrap{
+  position: fixed;
+}
+#topBanner.hidden~#header {
+  top: 0px;
+}
+#header.fixed{
+    top: 0;
+    transition: top 0.1s;
+  }
+/* 띠배너 시 헤더 수정완료 */

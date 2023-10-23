@@ -1,0 +1,15 @@
+.xans-mall-company {}
+.xans-mall-company:after {content:''; display:block; clear:both;}
+.xans-mall-company > div {float:left;}
+.mall_companyL {margin:0 60px 0 0;}
+.mall_companyR {}
+.xans-mall-company .mall_companyR > h3 {font-size:1.4rem; margin:20px 0px;}
+.xans-mall-company .mall_companyR > p {line-height: 25px;margin: 20px 0;font-size: 1rem;word-spacing: -2px;}
+.DRmap {margin:50px 0; padding:30px 0; border-top:1px solid #ccc; border-bottom:1px solid #ccc;}
+.DRmap > h3 {font-size:1.4rem; text-align:center; padding:0 0 30px 0;}
+.companyinfo {border-bottom:1px solid #ccc;}
+.companyinfo > h3 {font-size:1.4rem;}
+.companyinfo > ul {float:none;}
+.companyinfo > ul > li {padding:10px 0 0 0; font-size:1rem;}
+.companyinfo > ul > li > span {display:inline-block; width:100px; font-size:1rem;}
+

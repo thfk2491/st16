@@ -1,0 +1,34 @@
+/* 상세페이지 keycolor 수정 */
+.action_button [class^='btnSubmit'],
+.action_button a[class^='btnSubmit']{
+  background-color: #6cf;
+  color: #01f;
+}
+.action_button [class^='btnSubmit']:hover,
+.action_button a[class^='btnSubmit']:hover {
+  background-color: #01f;
+  color: #6cf;
+}
+/* 상세페이지 keycolor 수정 완료*/
+/* 상세페이지 keycolor 수정 */
+.xans-product-action [class^='btnSubmit'],
+.xans-product-action a[class^='btnSubmit'] {
+  background-color: #DAC8B8;
+  color: #2683C7;
+  border: 1px solid #999;
+}
+
+.xans-product-action [class^='btnSubmit']:hover,
+.xans-product-action a[class^='btnSubmit']:hover {
+  background-color: #F6DBD0;
+  color: #2683C7;
+  border: 1px solid #999;
+}
+
+/* 상세페이지 keycolor 수정 완료*/
+
+#main .board.xans-board-listpackage-4 .galleryList li .imgLink img{
+  max-height: none;  
+  object-fit: cover;
+  object-position: center;
+}

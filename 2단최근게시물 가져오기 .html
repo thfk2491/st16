@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3단배너</title>
+  <style>
+    /* 기본화면잡는건 여기에 */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .my-banner {
+      width: 90%;
+      margin: 50px auto;
+    }
+  </style>
+  <!-- 배너에 필요한 스타일 mycss.css -->
+  <link rel="stylesheet" href="/web/myfolder/css/mycss.css">
+</head>
+
+<body>
+  <!-- 
+    1차 이미지 3단배너
+    2차 ibase, 셀렉트 스킨 해당 html 과 css 를 입력
+
+    .col2  .col3  .col4 
+  -->
+  <div class="my-banner-title">배너타이틀</div>
+  <!-- my 2단배너 시작 -->
+  <div class="my-banner my-board">
+    <div class="my-banner-wrap">
+      <ul class="my-banner-container col2">
+        <li>
+          <div class="board" module="board_listpackage_4">
+            <!--@css(/css/module/board/371/listpackage_4.css)-->
+            <h3 module="board_title_4">{$home_title}</h3>
+            <div class="galleryList" module="board_list_4">
+              <!--
+                            $count = 5
+                            $main_list = yes
+                            $subject_cut = 25
+                        -->
+              <ul>
+                <li>
+                  <a href="/board/product/read.html{$param_read}" class="imgLink">{$image_big}{$subject}
+                    {$comment_count}</a>
+                  <span>{$write_date|date:Y-m-d}</span>
+                </li>
+                <li>
+                  <a href="/board/product/read.html{$param_read}" class="imgLink">{$image_big}{$subject}
+                    {$comment_count}</a>
+                  <span>{$write_date|date:Y-m-d}</span>
+                </li>
+              </ul>
+            </div>
+            <a href="/board/product/list.html?board_no=4" class="more"><img
+                src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/btn_board_more.gif" alt="더보기" /></a>
+          </div>
+
+
+        </li>
+        <!-- 2단 -->
+        <li>
+          <div class="board" module="board_listpackage_1">
+            <!--@css(/css/module/board/370/listpackage_1.css)-->
+            <h3 module="board_title_1">{$home_title}</h3>
+            <table border="1" summary="">
+              <caption>공지사항 목록</caption>
+              <thead module="board_listheader_1">
+                <tr>
+                  <th scope="col" class="title">제목</th>
+                  <th scope="col" class="date">작성일</th>
+                </tr>
+              </thead>
+              <tbody module="board_list_1">
+                <!--
+                        $count = 5
+                        $main_list = yes
+                        $subject_cut = 25
+                        $main_list_reply_view = no
+                     -->
+                <tr>
+                  <td class="title"><a href="/board/free/read.html{$param_read}">{$subject}</a>
+                    {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
+                  <td class="date {$date_display|display}">{$write_date|date:Y-m-d}</td>
+                </tr>
+                <tr>
+                  <td class="title"><a href="/board/free/read.html{$param_read}">{$subject}</a>
+                    {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
+                  <td class="date {$date_display|display}">{$write_date|date:Y-m-d}</td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="/board/free/list.html?board_no=1" class="more"><img
+                src="http://img.echosting.cafe24.com/skin/base_ko_KR/board/btn_board_more.gif" alt="더보기" /></a>
+          </div>
+
+
+        </li>
+      </ul>
+    </div>
+  </div>
+  <style>
+    .my-banner.my-board .my-banner-container.col2 {
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .my-banner.my-board .my-banner-wrap .my-banner-container li a.more img {
+      width: auto;
+    }
+
+    .my-banner.my-board .my-banner-wrap .my-banner-container li a.more {
+      width: auto;
+    }
+  </style>
+  <!-- my 3단배너 종료 -->
+
+</body>
+
+</html>

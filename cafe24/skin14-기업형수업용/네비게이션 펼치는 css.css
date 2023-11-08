@@ -1,0 +1,38 @@
+/* 기업형 네비게이션 펼치기 수정 */
+.navigation__category{
+  --menu-gap-margin-h:10px;
+
+}
+.navigation__category li#category{
+  margin: 0 var(--menu-gap-margin-h);
+}
+.navigation__category li#category>a{
+  display: none;
+}
+.navigation__category li#category>ul{
+  visibility:visible;
+  opacity: 1;
+  position: static;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+.navigation__category li#category>ul li{
+  display: inline-block;
+  margin-left:var(--menu-gap-margin-h);
+  margin-right:var(--menu-gap-margin-h);
+  padding: 0;
+}
+.navigation__category .myevent{
+  margin-left: 0em;
+}
+.navigation__category .myevent a{
+  color: #f00;
+  font-weight: bold;
+}
+.navigation__category .mybrand a{
+  margin-left: 0em;
+  color: #f6c;
+}
+
+/* 기업형 네비게이션 펼치기 수정완료 */

@@ -1,0 +1,195 @@
+/* 아이베이스 세트메뉴 설정 css 시작 */
+
+.my-set .xans-product-listmain .xans-record- .prdList__item{
+  position: relative;
+  overflow: hidden;
+}
+.my-set .xans-product-listmain .xans-record- .prdList__item .description{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0,0,255,0.7);
+  padding: 2em 1em;
+  box-sizing: border-box;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.1s;
+
+}
+.my-set .xans-product-listmain .xans-record- .prdList__item .description .spec {
+  margin-top: 5px;
+}
+
+.my-set .xans-product-listmain .xans-record- .prdList__item .description .spec>li {
+  margin-bottom: 0;
+}
+
+.my-set .xans-product-listmain .xans-record-:hover .prdList__item .description{
+  transform: translateY(0);
+  background-color: rgba(255, 0, 0, 0.7);
+  opacity: 1;
+  transition: all 0.8s;
+}
+/* 세트메뉴 1크고 2,3 작게 */
+/* 세트메뉴설정 수정 */
+.my-container.my-set {
+  --my-main_product_list-gap: 20px;
+  --my-prdList-gap: 10px;
+}
+
+.my-container.my-set {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: var(--my-main_product_list-gap);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-container.my-set .xans-product-listmain{
+  flex: none;
+  width: calc(50% - var(--my-main_product_list-gap));
+  box-sizing: border-box;
+}
+
+.my-container.my-set .main_product_list .xans-product-listmain {}
+
+.my-container.my-set .xans-product-listmain .prdList {
+  position: relative;
+  /* 아이템 3번을 위해서*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--my-prdList-gap);
+  box-sizing: border-box;
+}
+
+.my-container.my-set .xans-product-listmain .prdprdList__itemList>li {
+  flex: none;
+  box-sizing: border-box;
+}
+
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(1) {
+  width: calc(60% - var(--my-prdList-gap));
+}
+
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(2),
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(3) {
+  width: calc(40% - var(--my-prdList-gap));
+}
+
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(2) {}
+
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(3) {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.my-container.my-set .xans-product-listmain .prdprdList__itemList>li .prdList__item {
+  margin: 0;
+}
+
+.my-container.my-set .xans-product-listmain .prdList>li .thumbnail {}
+
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(1) .thumbnail {
+  position: relative;
+  padding-top: calc(100% + var(--my-main_product_list-gap));
+}
+
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(2) .thumbnail,
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(3) .thumbnail {
+  position: relative;
+  padding-top: calc(50% + 25% - (var(--my-prdList-gap) / 2));
+}
+
+.my-container.my-set .xans-product-listmain .prdList>li .thumbnail>a {
+  display: block;
+}
+
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(1) .thumbnail>a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(2) .thumbnail>a,
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(3) .thumbnail>a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.my-container.my-set .xans-product-listmain .prdList>li .thumbnail>a>img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(1) .thumbnail>a>img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(2) .thumbnail>a>img,
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(3) .thumbnail>a>img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+.my-container.my-set .main_product_list:nth-child(1) .xans-product-listmain .prdList>li:nth-child(3) .thumbnail>a>img {
+  object-position: 50% 0px;
+}
+
+.my-container.my-set .xans-product-listmain .prdList>li .description {
+  /* display: none; */
+}
+
+/* 타블렛, 모바일 설정 */
+@media (max-width:767.98px) {
+  .my-container.my-set {
+    gap: 0;
+    flex-wrap: wrap;
+  }
+
+  .my-container.my-set .main_product_list {
+    width: 100%;
+  }
+}
+
+/* 세트메뉴설정 수정완료 */
+/* 아이베이스 세트메뉴 설정 css 종료 */
+
+.dkssudgkdl{
+  margin-top: 600px;
+  background-color: #f00;
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+.dkssud{
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  display: block;
+  width: 200%;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+.dkssud:hover {
+  transform: scale(1.5);
+  transition: transform 0.3s ease-in-out;
+}
+.dkssud >img{
+  display: block;
+  width: 100%;
+}

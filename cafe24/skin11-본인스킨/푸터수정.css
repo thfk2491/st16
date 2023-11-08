@@ -1,0 +1,8 @@
+/* footer 수정 css 시작 */
+#footer {
+  --my-footer-logo-width: 400px;
+  --my-footer-inner-padding-top: 70px;
+}
+#footer .inner .bt_logo {
+  padding-top: var(--my-footer-inner-padding-top);
+}

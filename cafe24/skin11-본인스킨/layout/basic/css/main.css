@@ -285,3 +285,14 @@ main#contents {display: block;}
     .snsItem-wrapper{margin: 60px -10px 0;}
     .snsItem-wrapper .snsItem-item a{display: block; margin: 0 10px; }
 }
+.xans-custom-1.mainVisual .item{
+    height: 100vh;
+}
+.xans-custom-1.mainVisual picture {
+    width: calc(100% + 50px);
+}
+.xans-custom-1.mainVisual picture iframe{
+    left:50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+}

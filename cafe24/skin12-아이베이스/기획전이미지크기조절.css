@@ -1,0 +1,8 @@
+/* 기획전이미지크기조절 */
+.xans-project-package .banner{
+  text-align: center;
+}
+.xans-project-package .banner img{
+  max-width: 100%;
+  width: auto;
+}

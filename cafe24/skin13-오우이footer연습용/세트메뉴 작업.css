@@ -1,0 +1,111 @@
+/* 세트메뉴설정 수정 */
+.my-container.my-set {
+  --my-main_product_list-gap:20px;
+  --my-prdList-gap:10px;
+}
+.my-container.my-set{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: var(--my-main_product_list-gap);
+  margin-left: auto;
+  margin-right: auto;
+}
+.my-container.my-set .main_product_list{
+  flex: none;
+  width: calc(50% - var(--my-main_product_list-gap));
+  box-sizing: border-box;
+}
+.my-container.my-set .main_product_list .xans-product-listmain{}
+.my-container.my-set .main_product_list .xans-product-listmain .prdList{
+  position: relative;  /* 아이템 3번을 위해서*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--my-prdList-gap);
+  box-sizing: border-box;
+}
+.my-container.my-set .xans-product-listmain .prdprdList__itemList > li{
+  flex: none;
+  box-sizing: border-box;
+}
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(1) {
+  width: calc(50% - var(--my-prdList-gap));
+}
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(2),
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(3) {
+  width: calc(38% - var(--my-prdList-gap) );
+}
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(2) {}
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(3) {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.my-container.my-set .xans-product-listmain .prdprdList__itemList>li .prdList__item{
+  margin: 0;
+}
+.my-container.my-set .xans-product-listmain .prdList>li .thumbnail {}
+.my-container.my-set .xans-product-listmain .prdList > li:nth-child(1) .thumbnail{
+  position: relative;
+  padding-top: calc(100% + var(--my-main_product_list-gap));
+}
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(2) .thumbnail ,
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(3) .thumbnail {
+  position: relative;
+  padding-top: calc(50% + 25% - (var(--my-prdList-gap) / 2));
+}
+.my-container.my-set .xans-product-listmain .prdList>li .thumbnail>a {
+  display: block;
+}
+.my-container.my-set .xans-product-listmain .prdList > li:nth-child(1) .thumbnail > a{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(2) .thumbnail > a,
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(3) .thumbnail > a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.my-container.my-set .xans-product-listmain .prdList > li .thumbnail > a > img{
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(1) .thumbnail>a>img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(2) .thumbnail>a>img,
+.my-container.my-set .xans-product-listmain .prdList>li:nth-child(3) .thumbnail>a>img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+.my-container.my-set .main_product_list:nth-child(1) .xans-product-listmain .prdList>li:nth-child(3) .thumbnail>a>img {
+  object-position: 50% 0px;
+}
+
+.my-container.my-set .xans-product-listmain .prdList > li .description{
+  /* display: none; */
+}
+/* 타블렛, 모바일 설정 */
+@media (max-width:767.98px) {
+  .my-container.my-set {
+    gap: 0;
+    flex-wrap: wrap;
+  }
+  .my-container.my-set .main_product_list {
+    width: 100%;
+  }
+}
+/* 세트메뉴설정 수정완료 */
